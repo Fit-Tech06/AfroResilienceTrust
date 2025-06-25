@@ -86,37 +86,33 @@
   </script>
 
   <script>
-  const contactForm = document.getElementById('contactForm');
+  const form = document.getElementById('contactForm');
 
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const data = {
-      name: contactForm.elements['name'].value,
-      email: contactForm.elements['email'].value,
-      subject: contactForm.elements['subject'].value,
-      message: contactForm.elements['message'].value
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value
     };
 
     fetch('https://script.google.com/macros/s/AKfycbyGpyF-wpHRfgqFdieG-2tUvCf3bD4jrLjHGwSmkxNudspd7ufudTmvPuQPCqFy2w7c/exec', {
       method: 'POST',
-      body: JSON.stringify(data),
+      body: JSON.stringify(formData),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        "Content-Type": "application/json"
+      },
+      mode:'no-cors'
     })
-    .then(response => response.text())
-    .then(text => {
-      if (text === 'Success') {
-        alert('Message sent successfully!');
-        contactForm.reset();
-      } else {
-        alert('Something went wrong. Please try again.');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('Something went wrong.');
+   .then(() => {
+      alert("Submitted successfully!");
+      form.reset();
+     })
+    .catch(err => {
+      alert("Something went wrong!");
+      console.error(err);
     });
   });
 </script>
