@@ -91,10 +91,10 @@
       e.preventDefault();
 
       const formData = {
-        name: form.name.value,
-        email: form.email.value,
-        subject: form.subject.value,
-        message: form.message.value
+        name: document.querySelector('[name="name"]').value,
+       email: document.querySelector('[name="email"]').value,
+       subject: document.querySelector('[name="subject"]').value,
+       message: document.querySelector('[name="message"]').value
       };
 
       fetch('https://script.google.com/macros/s/AKfycbyGpyF-wpHRfgqFdieG-2tUvCf3bD4jrLjHGwSmkxNudspd7ufudTmvPuQPCqFy2w7c/exec', {
