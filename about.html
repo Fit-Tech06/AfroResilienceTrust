@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - AfroResilience Trust</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-gray-800">
+  <!-- HEADER -->
+  <header class="bg-gradient-to-r from-sky-800 to-cyan-700 text-white py-10 text-center shadow-md px-4">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-3">AfroResilience Trust</h1>
+    <p class="text-lg sm:text-xl">Empowering Lives with Purpose and Dignity</p>
+  </header>
+
+  <!-- NAVBAR with toggle -->
+  <nav class="bg-cyan-800 text-white px-4 py-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-lg font-semibold md:hidden">Menu</div>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="nav-links" class="flex-col md:flex md:flex-row md:justify-center gap-5 text-sm font-medium mt-4 md:mt-0 hidden md:flex">
+      <a href="index.html" class="hover:text-yellow-200 transition px-3 py-2">Home</a>
+      <a href="about.html" class="text-yellow-300 underline px-3 py-2">About</a>
+      <a href="gallery.html" class="hover:text-yellow-200 transition px-3 py-2">Gallery</a>
+      <a href="blog.html" class="hover:text-yellow-200 transition px-3 py-2">Blog</a>
+      <a href="volunteer.html" class="hover:text-yellow-200 transition px-3 py-2">Volunteer</a>
+      <a href="contact.html" class="hover:text-yellow-200 transition px-3 py-2">Contact</a>
+      <a href="donate.html" class="hover:text-yellow-200 transition px-3 py-2">Donate</a>
+      <a href="testimonials.html" class="hover:text-yellow-200 transition">Testimonials</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="px-4 py-12 max-w-7xl mx-auto">
+    <section class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-cyan-900 mb-4">Who We Are</h2>
+      <p class="text-base sm:text-lg max-w-3xl mx-auto text-gray-700">
+        AfroResilience Trust is a non-profit organization founded by <strong>Said Waziri Mwenjuma (Tanzania)</strong>,
+        <strong>Anthony Geria (Nigeria)</strong>, and <strong>Sanket (India)</strong>. We are united by a shared mission:
+        to empower underrepresented African communities — especially people with disabilities — through love,
+        leadership, and dignity.
+      </p>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-10 text-center mb-16">
+      <div>
+        <h3 class="text-2xl font-semibold text-emerald-700 mb-2">🌍 Mission</h3>
+        <p class="text-gray-600">To foster resilience, enable economic empowerment, and promote dignity across African
+          communities through tailored programs, outreach, and compassion-driven action.</p>
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold text-emerald-700 mb-2">🚀 Vision</h3>
+        <p class="text-gray-600">To see a continent where every individual — regardless of background or condition — has
+          the opportunity to thrive with confidence, purpose, and global relevance.</p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-center text-cyan-900 mb-6">Our Approach</h2>
+      <ul class="list-disc list-inside max-w-3xl mx-auto space-y-2 text-gray-700">
+        <li>Direct support to orphans and disabled individuals</li>
+        <li>Empowerment through real stories and motivation</li>
+        <li>Community visits to deliver help, food, and smiles</li>
+        <li>Online awareness via content, blogs, and videos</li>
+        <li>Leadership and skills training for future changemakers</li>
+      </ul>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-center text-cyan-900 mb-6">Our Impact Timeline</h2>
+      <ul class="max-w-3xl mx-auto text-gray-700 space-y-3">
+        <li><strong>2025:</strong> AfroResilience Trust was born across 3 nations with a common heart.</li>
+        <li><strong>2025 - Present:</strong> Dozens of children and individuals with disabilities supported with real help.</li>
+        <li><strong>Future:</strong> Expanding to more countries, launching leadership camps, and partnering with schools.</li>
+      </ul>
+    </section>
+
+    <section class="text-center">
+      <h2 class="text-3xl font-bold text-cyan-900 mb-8">Meet the Founders</h2>
+      <div class="flex flex-wrap justify-center gap-10">
+        <div class="bg-white rounded-xl shadow-md p-6 w-64 text-center transform hover:scale-105 transition duration-300">
+          <img src="images/6584712325.jpg" alt="Said Mwenjuma" class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
+          <p class="font-semibold text-lg">Said Mwenjuma</p>
+          <p class="text-sm text-gray-500">Tanzania</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-6 w-64 text-center transform hover:scale-105 transition duration-300">
+          <img src="images/8547821548.jpg" alt="Anthony Geria" class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
+          <p class="font-semibold text-lg">Anthony Geria</p>
+          <p class="text-sm text-gray-500">Nigeria</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-cyan-900 text-white text-center py-6 px-4">
+    <p class="text-sm">&copy; 2025 AfroResilience Trust. Built with passion and purpose 🌍</p>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>

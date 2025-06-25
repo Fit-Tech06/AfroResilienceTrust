@@ -1,0 +1,116 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  color: #333;
+  scroll-behavior: smooth;
+}
+header {
+  background: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?fit=crop&w=1470&q=80') no-repeat center center/cover;
+  color: white;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+.overlay {
+  background-color: rgba(0,0,0,0.5);
+  padding: 2em;
+  width: 100%;
+}
+nav.navbar {
+  background: #333;
+  text-align: center;
+  padding: 0.5em 0;
+}
+nav.navbar a {
+  color: #f9c10b;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+nav.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #f9c10b;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+nav.navbar a:hover {
+  color: #fff;
+}
+nav.navbar a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.hero {
+  text-align: center;
+  padding: 2em;
+  animation: slideIn 1s ease;
+}
+.hero img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+.quote {
+  background: #ffe58f;
+  padding: 1.5em;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2em;
+  animation: fadeIn 2s ease-in-out;
+}
+.team {
+  padding: 2em;
+  text-align: center;
+}
+.founders {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+.founder img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.founder img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #333;
+  color: #fff;
+  margin-top: 2em;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
