@@ -86,36 +86,29 @@
   </script>
 
   <script>
-  const form = document.getElementById('contactForm');
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
+      };
 
-    const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      subject: form.subject.value,
-      message: form.message.value
-    };
-
-    fetch('https://script.google.com/macros/s/AKfycbyGpyF-wpHRfgqFdieG-2tUvCf3bD4jrLjHGwSmkxNudspd7ufudTmvPuQPCqFy2w7c/exec', {
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: {
-        "Content-Type": "application/json"
-      },
-      mode:'no-cors'
-    })
-   .then(() => {
-      alert("Submitted successfully!");
-      form.reset();
-     })
-    .catch(err => {
-      alert("Something went wrong!");
-      console.error(err);
+      fetch('https://script.google.com/macros/s/AKfycbyGpyF-wpHRfgqFdieG-2tUvCf3bD4jrLjHGwSmkxNudspd7ufudTmvPuQPCqFy2w7c/exec', {
+        method: 'POST',
+        mode: 'no-cors', // You can remove this after testing if your script returns JSON
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(() => alert("Submitted!"))
+      .catch(err => alert("Error: " + err));
     });
-  });
-</script>
+  </script>
 
 </body>
 
