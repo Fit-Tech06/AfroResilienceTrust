@@ -74,34 +74,25 @@
   <!-- Backend Form Submission -->
   <script>
     const form = document.getElementById('volunteerForm');
-
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const data = {
-        name: form.elements['name'].value,
-        email: form.elements['email'].value,
-        message: form.elements['message'].value
+      const formData = {
+        name: document.querySelector('[name="name"]').value,
+       email: document.querySelector('[name="email"]').value,
+       message: document.querySelector('[name="message"]').value
       };
 
-      try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbxvH6EVm_gVlyO0ZHxbz-DoHAq2Dgy2_FbMLoO3fuu9SinKI0FNW66Kv-kQRf3NMGQ0/exec', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-
-        const text = await res.text();
-        if (text === 'Success') {
-          alert('Application submitted! Thank you!');
-          form.reset();
-        } else {
-          throw new Error('Server did not return success');
-        }
-      } catch (error) {
-        console.error('Submission error:', error);
-        alert('Something went wrong.');
-      }
+      fetch('https://script.google.com/macros/s/AKfycbxvH6EVm_gVlyO0ZHxbz-DoHAq2Dgy2_FbMLoO3fuu9SinKI0FNW66Kv-kQRf3NMGQ0/exec', {
+        method: 'POST',
+        mode: 'no-cors', // You can remove this after testing if your script returns JSON
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(() => alert("Submitted Successfully! We will contact you soon"))
+      .catch(err => alert("Error: " + err));
     });
   </script>
 
